@@ -639,12 +639,127 @@
       </div>
     </div>
 
-    <div class="modal-order--overlay modal-overlay">
+    <div class="modal-order--overlay modal-overlay is-open">
       <div class="modal-order">
-        <button class="modal-order--btn">
+        <button class="modal-order--close-btn">
           <img class="close-btn" src="./images/close-btn.svg" alt="Close button" width="32" height="32" />
         </button>
-        <p class="modal-title">Leave your contacts and we will contact you</p>
+        <p class="modal-order--title">Your ordering</p>
+        <form class="modal-order--form">
+          <fieldset class="modal-order--form-fieldset">
+            <legend class="modal-order--form-title-group">Contacts</legend>
+            <div class="modal-order--form-wrapper">
+              <lable class="modal-order--form-lable" for="user-email">Surnam</lable>
+              <input
+                class="modal-order--form-input"
+                type="text"
+                id="user-surnam"
+                name="user-surnam"
+                placeholder="Krutas"
+                required
+                autofocus
+              />
+            </div>
+            <div class="modal-order--form-wrapper">
+              <lable class="modal-order--form-lable" for="user-name">Name</lable>
+              <input
+                class="modal-order--form-input"
+                type="text"
+                id="user-firstname"
+                name="user-firstname"
+                placeholder="Yuliia"
+                required
+              />
+            </div>
+            <div class="modal-order--form-wrapper">
+              <lable class="modal-order--form-lable" for="user-telephone">Telephone</lable>
+              <input
+                class="modal-order--form-input"
+                type="tel"
+                id="user-phone"
+                name="user-phone"
+                placeholder="+380"
+                required
+              />
+            </div>
+            <div class="modal-order--form-wrapper">
+              <lable class="modal-order--form-lable" for="user-city">City</lable>
+              <select class="modal-order--form-select" name="city" id="user-city">
+                <option value="Kyiv">Kyiv</option>
+                <option value="Sumy">Sumy</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset class="modal-order--form-fieldset">
+            <legend class="modal-order--form-title-group">Delivery</legend>
+            <div class="modal-order--form-inner">
+              <div class="modal-order--form-wrapper">
+                <lable class="modal-order--form-lable" for="department"> Delivery to department of Nova Poshta </lable>
+                <input
+                  class="modal-order--form-checkbox"
+                  type="checkbox"
+                  id="department"
+                  name="delivery-way"
+                  required
+                />
+              </div>
+              <div class="modal-order--form-wrapper">
+                <lable class="modal-order--form-lable" for="courier">Delivery by courier of Nova Poshta</lable>
+                <input class="modal-order--form-checkbox" type="checkbox" id="courier" name="delivery-way" required />
+              </div>
+            </div>
+            <div class="modal-order--form-wrapper">
+              <lable class="modal-order--form-lable" for="department">Select department</lable>
+              <select class="modal-order--form-select" name="department" id="department">
+                <option value="Kyiv">Department</option>
+                <option value="Sumy">Sumy</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset class="modal-order--form-fieldset">
+            <legend class="modal-order--form-title-group">Payment method</legend>
+            <div class="modal-order--form-wrapper">
+              <lable class="modal-order--form-lable" for="card">Credit card (Visa, Mastercard, ApplePay)</lable>
+              <input class="modal-order--form-radio" type="radio" id="card" name="pay-way" required />
+            </div>
+            <div class="modal-order--form-wrapper">
+              <lable class="modal-order--form-lable" for="Cash">Cash on delivery</lable>
+              <input class="modal-order--form-radio" type="radio" id="Cash" name="pay-way" required />
+            </div>
+          </fieldset>
+
+          <div class="modal-order--form-wrapper">
+            <lable class="modal-order--form-lable" for="order-comment">Add a comment to the order</lable>
+            <textarea
+              class="modal-order--form-textarea"
+              id="order-comment"
+              name="order-comment"
+              placeholder="Your comment"
+            ></textarea>
+          </div>
+
+          <div class="modal-order--form-confirm">
+            <input
+              class="modal-order--form-confirm-input visually-hidden"
+              type="checkbox"
+              name="confirm"
+              id="confirm"
+              value="false"
+              required
+            />
+            <label class="modal-order--form-confirm-label" for="confirm">
+              <!-- <span class="modal-order--form-span-svg">
+                <svg class="checked-svg" width="10" height="8">
+                  <use href="./images/icons.svg#checked"></use>
+                </svg>
+              </span> -->
+              Do not call to confirm
+            </label>
+          </div>
+
+          <button class="modal-order--btn" type="submit">Buy now</button>
+        </form>
       </div>
     </div>
 

@@ -44,6 +44,34 @@ modalOverlay.addEventListener('click', closeModaContactsHandler);
 modalcloseBtn.addEventListener('click', closeModaContactsHandler);
 modalContacts.addEventListener('click', stopPropagation);
 
+// //! Modal Order
+// const modalOverlay = document.querySelector('.modal-contacts--overlay');
+// const contactsBtns = document.querySelectorAll('.contacts-btn');
+// const modalcloseBtn = document.querySelector('.modal-contacts--close-btn');
+// const modalContacts = document.querySelector('.modal-contacts');
+
+// function stopPropagation(event) {
+//   event.stopPropagation();
+// }
+
+// function openModaContactsHandler() {
+//   modalOverlay.classList.add('is-open');
+//   document.body.classList.add('no-scroll');
+// }
+
+// function closeModaContactsHandler() {
+//   modalOverlay.classList.remove('is-open');
+//   if (mobileMenu.classList.contains('open')) {
+//     return;
+//   }
+//   document.body.classList.remove('no-scroll');
+// }
+
+// contactsBtns.forEach((contactsBtn) => contactsBtn.addEventListener('click', openModaContactsHandler));
+// modalOverlay.addEventListener('click', closeModaContactsHandler);
+// modalcloseBtn.addEventListener('click', closeModaContactsHandler);
+// modalContacts.addEventListener('click', stopPropagation);
+
 //! Video script
 function findmovies() {
   let movies = document.querySelectorAll('.movie-item');

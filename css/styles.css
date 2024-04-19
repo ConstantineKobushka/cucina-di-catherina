@@ -599,6 +599,119 @@ body {
   background-color: #bc1a1a;
 }
 
+/* ! Modal Order */
+
+.modal-order {
+  overflow-y: scroll;
+  overflow-x: scroll;
+  width: 288px;
+  min-height: 1272px;
+  padding: 15px;
+  border-radius: 16px;
+  background-color: #100f0f;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-order--close-btn {
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 0 10px auto;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+.modal-order--close-btn:hover,
+.modal-order--close-btn:focus {
+  background-color: #bc1a1a;
+}
+.modal-order--title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  width: 254px;
+  margin: 0 auto 20px auto;
+}
+.modal-order--form-fieldset {
+  margin-bottom: 40px;
+}
+.modal-order--form-title-group {
+  margin-bottom: 24px;
+}
+.modal-order--form {
+}
+.modal-order--form-wrapper {
+}
+.modal-order--form-lable {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.modal-order--form-input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #f3f3f3;
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid #f3f3f3;
+  border-radius: 16px;
+  background-color: transparent;
+  outline: transparent;
+  margin-bottom: 20px;
+}
+.modal-order--form-input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #999ea3;
+}
+.modal-order--form-select {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #f3f3f3;
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid #f3f3f3;
+  border-radius: 16px;
+  background-color: transparent;
+  outline: transparent;
+}
+.modal-order--form-select::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #999ea3;
+}
+.modal-order--form-textarea {
+  margin-bottom: 20px;
+}
+.modal-order--form-confirm {
+  margin-bottom: 40px;
+}
+.modal-order--btn {
+  font-size: 20px;
+  font-weight: 800;
+  color: #f3f3f3;
+  width: 258px;
+  height: 60px;
+  margin: 0 auto;
+  display: block;
+  background-color: #321111;
+  border: 1px solid #321111;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+.modal-order--btn:hover,
+.modal-order--btn:focus {
+  background-color: #bc1a1a;
+}
+
 /*! Media */
 
 @media (min-width: 321px) {
