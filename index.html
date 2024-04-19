@@ -588,15 +588,15 @@
 
     <div class="modal-contacts--overlay modal-overlay">
       <div class="modal-contacts">
-        <button class="modal-close--btn">
+        <button class="modal-contacts--close-btn">
           <img class="close-btn" src="./images/close-btn.svg" alt="Close button" width="32" height="32" />
         </button>
-        <p class="modal-title">Leave your contacts and we will contact you</p>
-        <form class="modal-form">
-          <div class="modal-form--wrapper">
-            <lable class="modal-form--lable" for="user-name">Name</lable>
+        <p class="modal-contacts--title">Leave your contacts and we will contact you</p>
+        <form class="modal-contacts--form">
+          <div class="modal-contacts--form-wrapper">
+            <lable class="modal-contacts--form-lable" for="user-name">Name</lable>
             <input
-              class="modal-form--input"
+              class="modal-contacts--form-input"
               type="text"
               id="user-name"
               name="user-name"
@@ -604,10 +604,10 @@
               required
             />
           </div>
-          <div class="modal-form--wrapper">
-            <lable class="modal-form--lable" for="user-telephone">Telephone</lable>
+          <div class="modal-contacts--form-wrapper">
+            <lable class="modal-contacts--form-lable" for="user-telephone">Telephone</lable>
             <input
-              class="modal-form--input"
+              class="modal-contacts--form-input"
               type="tel"
               id="user-telephone"
               name="user-telephone"
@@ -615,10 +615,10 @@
               required
             />
           </div>
-          <div class="modal-form--wrapper">
-            <lable class="modal-form--lable" for="user-email">Email</lable>
+          <div class="modal-contacts--form-wrapper">
+            <lable class="modal-contacts--form-lable" for="user-email">Email</lable>
             <input
-              class="modal-form--input"
+              class="modal-contacts--form-input"
               type="email"
               id="user-email"
               name="user-email"
@@ -626,9 +626,9 @@
               required
             />
           </div>
-          <div class="modal-form--wrapper">
+          <div class="modal-contacts--form-wrapper">
             <textarea
-              class="modal-form--textarea"
+              class="modal-contacts--form-textarea"
               id="user-comment"
               name="user-comment"
               placeholder="How can we help you?"
@@ -640,7 +640,12 @@
     </div>
 
     <div class="modal-order--overlay modal-overlay">
-      <div class="modal-order"></div>
+      <div class="modal-order">
+        <button class="modal-order--btn">
+          <img class="close-btn" src="./images/close-btn.svg" alt="Close button" width="32" height="32" />
+        </button>
+        <p class="modal-title">Leave your contacts and we will contact you</p>
+      </div>
     </div>
 
     <script src="./js/main.js"></script>

@@ -19,7 +19,7 @@ closeBtn.addEventListener('click', closeMobileMenuHandler);
 //! Modal Contacts
 const modalOverlay = document.querySelector('.modal-contacts--overlay');
 const contactsBtns = document.querySelectorAll('.contacts-btn');
-const modalcloseBtn = document.querySelector('.modal-close--btn');
+const modalcloseBtn = document.querySelector('.modal-contacts--close-btn');
 const modalContacts = document.querySelector('.modal-contacts');
 
 function stopPropagation(event) {
