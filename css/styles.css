@@ -52,7 +52,6 @@ body {
 /*! Header */
 
 .header {
-  padding: 20px 0;
   background-image: linear-gradient(
     200deg,
     rgba(111, 102, 102, 0.9) 0%,
@@ -61,12 +60,44 @@ body {
   );
   position: relative;
 }
-.contacts-btn {
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  padding: 24px 0;
+}
+.heder-menu--list {
+  display: none;
+}
+.header-menu--item {
+}
+.header-menu--link {
+  padding: 30px 0;
+}
+.menu--link {
   display: block;
+  font-weight: 600;
+  transition: color 0.2s ease-in;
+}
+.menu--link:hover,
+.menu--link:focus {
+  color: #bc1a1a;
+}
+.menu--link.active {
+  color: #bc1a1a;
+}
+.header-contacts--btn {
+  display: none;
+}
+.contacts-btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-size: 16px;
   color: #f3f3f3;
+  min-width: 160px;
+  height: 40px;
   padding: 10px 33px;
   border: 1px solid #f3f3f3;
   border-radius: 16px;
@@ -81,7 +112,6 @@ body {
   color: #bc1a1a;
   border-color: #bc1a1a;
 }
-
 .header-burger--btn {
   background-color: transparent;
   cursor: pointer;
@@ -90,31 +120,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header-menu--link {
-  font-weight: 600;
-}
-.menu--link {
-  font-weight: 600;
-  transition: color 0.2s ease-in;
-}
-.menu--link:hover,
-.menu--link:focus {
-  color: #bc1a1a;
-}
-.menu--link.active {
-  color: #bc1a1a;
-}
-.heder-menu--list {
-  display: none;
-}
-.header-contacts--btn {
-  display: none;
 }
 
 /*! Mobile menu */
@@ -125,19 +130,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px 15px;
+  padding: 20px;
   background-color: #100f0f;
   transform: translateY(-100%);
-  visibility: hidden;
-  transition:
-    transform 0.5s ease-in,
-    visibility 0.5s ease-in;
+  transition: transform 0.5s ease-in;
   z-index: 10;
-  overflow: hidden;
 }
 .mobile-menu.open {
   transform: translateY(0%);
-  visibility: visible;
 }
 .mobile-top {
   display: flex;
@@ -157,13 +157,18 @@ body {
 .mobile-menu--list {
   display: flex;
   flex-direction: column;
-  gap: 28px;
   margin-bottom: 40px;
   text-align: center;
+}
+.mobile-menu--item {
+}
+.mobile-menu--link {
+  padding: 15px 0;
 }
 .mobile-contacts--btn {
   width: 160px;
   margin: 0 auto;
+  display: block;
 }
 
 /*! Section Hero */
@@ -504,22 +509,26 @@ body {
 /* ! Modal Contacts */
 
 .modal-contacts {
-  width: 288px;
-  min-height: 650px;
-  padding: 15px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 756px;
+  padding: 60px 15px;
   border-radius: 16px;
   background-color: #100f0f;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-contacts--close-btn {
+  position: absolute;
+  top: 16px;
+  right: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
-  margin: 0 0 10px auto;
   cursor: pointer;
   transition: background-color 0.2s ease-in;
 }
@@ -528,15 +537,15 @@ body {
   background-color: #bc1a1a;
 }
 .modal-contacts--title {
-  font-size: 20px;
   font-weight: 700;
+  font-size: 28px;
   text-align: center;
-  width: 254px;
-  margin: 0 auto 20px auto;
+  width: 355px;
+  margin: 0 auto 50px auto;
 }
-.modal-contacts--form-lable {
-  display: inline-block;
-  margin-bottom: 10px;
+.modal-contacts--form-label {
+  display: block;
+  margin-bottom: 12px;
 }
 .modal-contacts--form-input {
   font-family: "Montserrat", sans-serif;
@@ -544,8 +553,8 @@ body {
   font-size: 16px;
   color: #f3f3f3;
   width: 100%;
-  height: 50px;
-  padding: 15px;
+  height: 52px;
+  padding: 16px;
   border: 1px solid #f3f3f3;
   border-radius: 16px;
   background-color: transparent;
@@ -565,14 +574,14 @@ body {
   color: #f3f3f3;
   width: 100%;
   height: 100px;
-  padding: 15px;
+  padding: 16px;
   border: 1px solid #f3f3f3;
   border-radius: 16px;
   background-color: transparent;
   display: inline-block;
   resize: none;
   outline: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .modal-contacts--form-textarea::placeholder {
   font-family: "Montserrat", sans-serif;
@@ -602,16 +611,20 @@ body {
 /* ! Modal Order */
 
 .modal-order {
-  overflow-y: scroll;
-  overflow-x: scroll;
-  width: 288px;
-  min-height: 1272px;
-  padding: 15px;
+  /* width: 288px;
+  width: 504px; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 60px 15px;
   border-radius: 16px;
   background-color: #100f0f;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-order--close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
   border-radius: 50%;
   background-color: transparent;
   display: flex;
@@ -619,7 +632,6 @@ body {
   align-items: center;
   width: 32px;
   height: 32px;
-  margin: 0 0 10px auto;
   cursor: pointer;
   transition: background-color 0.2s ease-in;
 }
@@ -628,11 +640,11 @@ body {
   background-color: #bc1a1a;
 }
 .modal-order--title {
-  font-size: 20px;
   font-weight: 700;
+  font-size: 32px;
   text-align: center;
-  width: 254px;
-  margin: 0 auto 20px auto;
+  width: 231px;
+  margin: 0 auto 40px auto;
 }
 .modal-order--form-fieldset {
   margin-bottom: 40px;
@@ -643,10 +655,11 @@ body {
 .modal-order--form {
 }
 .modal-order--form-wrapper {
+  margin-bottom: 20px;
 }
-.modal-order--form-lable {
-  display: inline-block;
-  margin-bottom: 10px;
+.modal-order--form-label {
+  display: block;
+  margin-bottom: 12px;
 }
 .modal-order--form-input {
   font-family: "Montserrat", sans-serif;
@@ -681,17 +694,32 @@ body {
   background-color: transparent;
   outline: transparent;
 }
-.modal-order--form-select::placeholder {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #999ea3;
-}
-.modal-order--form-textarea {
+.modal-order--form-inner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   margin-bottom: 20px;
 }
+.delivery-way {
+  font-size: 16px;
+  border: 1px solid #f3f3f3;
+}
+.delivery-way:checked {
+  color: #2c2c2c;
+  background-color: #f3f3f3;
+}
+.delivery-to-department {
+  border-radius: 16px 0 0 16px;
+}
+.delivery-by-courier {
+  border-radius: 0 16px 16px 0;
+}
+.modal-order--form-link {
+  margin-bottom: 20px;
+  display: block;
+  text-decoration: underline;
+}
 .modal-order--form-confirm {
-  margin-bottom: 40px;
 }
 .modal-order--btn {
   font-size: 20px;
@@ -714,46 +742,12 @@ body {
 
 /*! Media */
 
-@media (min-width: 321px) {
-  .modal-contacts {
-    width: 384px;
-    min-height: 670px;
-  }
-  .modal-contacts--title {
-    font-size: 28px;
-    width: 355px;
-  }
-  .modal-contacts--form-wrapper {
-    width: 354px;
-    margin: 0 auto;
-  }
-  .modal-contacts--btn {
-    width: 354px;
-  }
-}
-
-@media (min-width: 415px) {
+@media (min-width: 414px) {
   .container {
     padding: 0 47px;
   }
-  .heder-menu--list {
-    display: flex;
-    gap: 52px;
-  }
   .header-menu--link {
     font-weight: 600;
-  }
-  .header-contacts--btn {
-    display: block;
-  }
-  .header-burger--btn {
-    display: none;
-  }
-  .header-burger--btn {
-    display: none;
-  }
-  .mobile-menu {
-    display: none;
   }
   .hero-desctop {
     display: block;
@@ -940,12 +934,23 @@ body {
   }
   .modal-contacts {
     width: 530px;
+    padding: 60px;
   }
-  .modal-contacts--form-wrapper {
-    width: 410px;
+}
+
+@media (min-width: 820px) {
+  .heder-menu--list {
+    display: flex;
+    gap: 52px;
   }
-  .modal-contacts--btn {
-    width: 410px;
+  .header-contacts--btn {
+    display: block;
+  }
+  .header-burger--btn {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
   }
 }
 
