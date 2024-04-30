@@ -17,9 +17,9 @@ burgerBtn.addEventListener('click', openMobileMenuHandler);
 closeBtn.addEventListener('click', closeMobileMenuHandler);
 
 //! Modal Contacts
-const modalOverlay = document.querySelector('.modal-contacts--overlay');
+const modalContactsOverlay = document.querySelector('.modal-contacts--overlay');
 const contactsBtns = document.querySelectorAll('.contacts-btn');
-const modalcloseBtn = document.querySelector('.modal-contacts--close-btn');
+const modalContactsCloseBtn = document.querySelector('.modal-contacts--close-btn');
 const modalContacts = document.querySelector('.modal-contacts');
 
 function stopPropagation(event) {
@@ -27,50 +27,47 @@ function stopPropagation(event) {
 }
 
 function openModaContactsHandler() {
-  modalOverlay.classList.add('is-open');
+  modalContactsOverlay.classList.add('is-open');
   document.body.classList.add('no-scroll');
 }
 
 function closeModaContactsHandler() {
-  modalOverlay.classList.remove('is-open');
+  modalContactsOverlay.classList.remove('is-open');
   if (mobileMenu.classList.contains('open')) {
     return;
   }
   document.body.classList.remove('no-scroll');
 }
 
-contactsBtns.forEach((contactsBtn) => contactsBtn.addEventListener('click', openModaContactsHandler));
-modalOverlay.addEventListener('click', closeModaContactsHandler);
-modalcloseBtn.addEventListener('click', closeModaContactsHandler);
+contactsBtns.forEach((contactBtn) => contactBtn.addEventListener('click', openModaContactsHandler));
+modalContactsOverlay.addEventListener('click', closeModaContactsHandler);
+modalContactsCloseBtn.addEventListener('click', closeModaContactsHandler);
 modalContacts.addEventListener('click', stopPropagation);
 
 // //! Modal Order
-// const modalOverlay = document.querySelector('.modal-contacts--overlay');
-// const contactsBtns = document.querySelectorAll('.contacts-btn');
-// const modalcloseBtn = document.querySelector('.modal-contacts--close-btn');
-// const modalContacts = document.querySelector('.modal-contacts');
+const modalOrderOverlay = document.querySelector('.modal-order--overlay');
+const ordersBtn = document.querySelectorAll('.order-btn');
+const modalOrderCloseBtn = document.querySelector('.modal-order--close-btn');
+const modalOrder = document.querySelector('.modal-order');
 
-// function stopPropagation(event) {
-//   event.stopPropagation();
-// }
+function stopPropagation(event) {
+  event.stopPropagation();
+}
 
-// function openModaContactsHandler() {
-//   modalOverlay.classList.add('is-open');
-//   document.body.classList.add('no-scroll');
-// }
+function openModalOrderHandler() {
+  modalOrderOverlay.classList.add('is-open');
+  document.body.classList.add('no-scroll');
+}
 
-// function closeModaContactsHandler() {
-//   modalOverlay.classList.remove('is-open');
-//   if (mobileMenu.classList.contains('open')) {
-//     return;
-//   }
-//   document.body.classList.remove('no-scroll');
-// }
+function closeModalOrderHandler() {
+  modalOrderOverlay.classList.remove('is-open');
+  document.body.classList.remove('no-scroll');
+}
 
-// contactsBtns.forEach((contactsBtn) => contactsBtn.addEventListener('click', openModaContactsHandler));
-// modalOverlay.addEventListener('click', closeModaContactsHandler);
-// modalcloseBtn.addEventListener('click', closeModaContactsHandler);
-// modalContacts.addEventListener('click', stopPropagation);
+ordersBtn.forEach((orderBtn) => orderBtn.addEventListener('click', openModalOrderHandler));
+modalOrderOverlay.addEventListener('click', closeModalOrderHandler);
+modalOrderCloseBtn.addEventListener('click', closeModalOrderHandler);
+modalOrder.addEventListener('click', stopPropagation);
 
 //! Video script
 function findmovies() {
