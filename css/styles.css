@@ -1062,6 +1062,12 @@ body {
   .mobile-menu {
     display: none;
   }
+  .hero-desctop {
+    display: block;
+  }
+  .hero-mobile {
+    display: none;
+  }
 }
 
 @media (min-width: 1025px) {
