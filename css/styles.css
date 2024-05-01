@@ -200,6 +200,7 @@ body {
     rgba(16, 15, 15, 0.9) 99.98%
   );
   margin-bottom: 100px;
+  position: relative;
 }
 .hero-mobile::before {
   content: "";
@@ -208,7 +209,7 @@ body {
   height: 177px;
   transform: rotate(-20deg);
   left: 0;
-  bottom: 250px;
+  bottom: 280px;
   background-image: url("../images/hero/hero-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
