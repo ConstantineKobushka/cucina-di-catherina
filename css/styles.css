@@ -208,7 +208,7 @@ body {
   height: 177px;
   transform: rotate(-20deg);
   left: 0;
-  bottom: 170px;
+  bottom: 250px;
   background-image: url("../images/hero/hero-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -459,9 +459,6 @@ body {
   align-items: center;
   gap: 8px;
 }
-/* .contacts-item + .contacts-item {
-  margin-top: 16px;
-} */
 .footer-address-link {
   transition: color 0.2s ease-in;
 }
