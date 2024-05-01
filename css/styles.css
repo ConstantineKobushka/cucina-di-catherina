@@ -200,9 +200,8 @@ body {
     rgba(16, 15, 15, 0.9) 99.98%
   );
   margin-bottom: 100px;
-  position: relative;
 }
-.hero-mobile::before {
+/* .hero-mobile::before {
   content: "";
   position: absolute;
   width: 302px;
@@ -214,12 +213,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-}
+} */
 .hero-mobile--inner {
   display: flex;
   align-items: flex-start;
   gap: 18px;
   margin-bottom: 24px;
+  position: relative;
+}
+.hero-mobile--inner::before {
+  content: "";
+  position: absolute;
+  width: 302px;
+  height: 177px;
+  transform: rotate(-20deg);
+  left: 0;
+  bottom: 24px;
+  background-image: url("../images/hero/hero-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 .hero-mobile--content {
   width: 195px;
@@ -237,7 +250,7 @@ body {
 .hero-mobile--slogan span {
   color: rgba(188, 26, 26, 0.71);
 }
-.hero-mobile--box--img {
+.hero-mobile--box-img {
   width: 171px;
   z-index: 1;
 }
