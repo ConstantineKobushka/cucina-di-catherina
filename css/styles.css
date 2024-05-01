@@ -759,7 +759,8 @@ body {
     color 0.2s ease-in,
     background-color 0.2s ease-in;
 }
-.delivery-way:hover {
+.delivery-way:hover,
+.delivery-way:focus {
   color: #2c2c2c;
   background-color: #f3f3f3;
 }
