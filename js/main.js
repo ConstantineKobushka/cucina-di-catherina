@@ -1,124 +1,167 @@
-//! Mobile menu
-const burgerBtn = document.querySelector('.header-burger--btn');
-const mobileMenu = document.querySelector('.mobile-menu');
-const closeBtn = document.querySelector('.mobile-close--btn');
+const storeSwiper = new Swiper('.store-swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
 
-openMobileMenuHandler = function () {
-  mobileMenu.classList.add('open');
-  document.body.classList.add('no-scroll');
-};
+  // If we need pagination
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
 
-closeMobileMenuHandler = function () {
-  mobileMenu.classList.remove('open');
-  document.body.classList.remove('no-scroll');
-};
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-burgerBtn.addEventListener('click', openMobileMenuHandler);
-closeBtn.addEventListener('click', closeMobileMenuHandler);
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});
 
-//! Modal Contacts
-const modalContactsOverlay = document.querySelector('.modal-contacts--overlay');
-const contactsBtns = document.querySelectorAll('.contacts-btn');
-const modalContactsCloseBtn = document.querySelector('.modal-contacts--close-btn');
-const modalContacts = document.querySelector('.modal-contacts');
+const gallerySwiper = new Swiper('.gallery-swiper', {
+  // Optional parameters
+  loop: true,
 
-function stopPropagation(event) {
-  event.stopPropagation();
-}
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-function openModaContactsHandler() {
-  modalContactsOverlay.classList.add('is-open');
-  document.body.classList.add('no-scroll');
-}
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-function closeModaContactsHandler() {
-  modalContactsOverlay.classList.remove('is-open');
-  if (mobileMenu.classList.contains('open')) {
-    return;
-  }
-  document.body.classList.remove('no-scroll');
-}
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});
 
-contactsBtns.forEach((contactBtn) => contactBtn.addEventListener('click', openModaContactsHandler));
-modalContactsOverlay.addEventListener('click', closeModaContactsHandler);
-modalContactsCloseBtn.addEventListener('click', closeModaContactsHandler);
-modalContacts.addEventListener('click', stopPropagation);
+// //! Mobile menu
+// const burgerBtn = document.querySelector('.header-burger--btn');
+// const mobileMenu = document.querySelector('.mobile-menu');
+// const closeBtn = document.querySelector('.mobile-close--btn');
 
-// //! Modal Order
-const modalOrderOverlay = document.querySelector('.modal-order--overlay');
-const ordersBtn = document.querySelectorAll('.order-btn');
-const modalOrderCloseBtn = document.querySelector('.modal-order--close-btn');
-const modalOrder = document.querySelector('.modal-order');
+// openMobileMenuHandler = function () {
+//   mobileMenu.classList.add('open');
+//   document.body.classList.add('no-scroll');
+// };
 
-function stopPropagation(event) {
-  event.stopPropagation();
-}
+// closeMobileMenuHandler = function () {
+//   mobileMenu.classList.remove('open');
+//   document.body.classList.remove('no-scroll');
+// };
 
-function openModalOrderHandler() {
-  modalOrderOverlay.classList.add('is-open');
-  document.body.classList.add('no-scroll');
-}
+// burgerBtn.addEventListener('click', openMobileMenuHandler);
+// closeBtn.addEventListener('click', closeMobileMenuHandler);
 
-function closeModalOrderHandler() {
-  modalOrderOverlay.classList.remove('is-open');
-  document.body.classList.remove('no-scroll');
-}
+// //! Modal Contacts
+// const modalContactsOverlay = document.querySelector('.modal-contacts--overlay');
+// const contactsBtns = document.querySelectorAll('.contacts-btn');
+// const modalContactsCloseBtn = document.querySelector('.modal-contacts--close-btn');
+// const modalContacts = document.querySelector('.modal-contacts');
 
-ordersBtn.forEach((orderBtn) => orderBtn.addEventListener('click', openModalOrderHandler));
-modalOrderOverlay.addEventListener('click', closeModalOrderHandler);
-modalOrderCloseBtn.addEventListener('click', closeModalOrderHandler);
-modalOrder.addEventListener('click', stopPropagation);
+// function stopPropagation(event) {
+//   event.stopPropagation();
+// }
 
-//! Video script
-function findmovies() {
-  let movies = document.querySelectorAll('.movie-item');
+// function openModaContactsHandler() {
+//   modalContactsOverlay.classList.add('is-open');
+//   document.body.classList.add('no-scroll');
+// }
 
-  for (let i = 0; i < movies.length; i++) {
-    setupVideo(movies[i]);
-  }
-}
+// function closeModaContactsHandler() {
+//   modalContactsOverlay.classList.remove('is-open');
+//   if (mobileMenu.classList.contains('open')) {
+//     return;
+//   }
+//   document.body.classList.remove('no-scroll');
+// }
 
-function setupVideo(movie) {
-  let link = movie.querySelector('.movie-item--link');
-  let media = movie.querySelector('.movie-item--img');
-  let button = movie.querySelector('.movie-item--btn');
-  let id = parseMediaURL(media);
+// contactsBtns.forEach((contactBtn) => contactBtn.addEventListener('click', openModaContactsHandler));
+// modalContactsOverlay.addEventListener('click', closeModaContactsHandler);
+// modalContactsCloseBtn.addEventListener('click', closeModaContactsHandler);
+// modalContacts.addEventListener('click', stopPropagation);
 
-  movie.addEventListener('click', () => {
-    let iframe = createIframe(id);
+// // //! Modal Order
+// const modalOrderOverlay = document.querySelector('.modal-order--overlay');
+// const ordersBtn = document.querySelectorAll('.order-btn');
+// const modalOrderCloseBtn = document.querySelector('.modal-order--close-btn');
+// const modalOrder = document.querySelector('.modal-order');
 
-    link.remove();
-    button.remove();
-    movie.appendChild(iframe);
-  });
+// function stopPropagation(event) {
+//   event.stopPropagation();
+// }
 
-  link.removeAttribute('href');
-  movie.classList.add('movie-item--enable');
-}
+// function openModalOrderHandler() {
+//   modalOrderOverlay.classList.add('is-open');
+//   document.body.classList.add('no-scroll');
+// }
 
-function parseMediaURL(media) {
-  let regexp = /https:\/\/i.ytimg.com\/vi\/([a-zA-Z0-9_-]+)\/sddefault.jpg/;
-  let url = media.src;
-  let match = url.match(regexp);
+// function closeModalOrderHandler() {
+//   modalOrderOverlay.classList.remove('is-open');
+//   document.body.classList.remove('no-scroll');
+// }
 
-  return match[1];
-}
+// ordersBtn.forEach((orderBtn) => orderBtn.addEventListener('click', openModalOrderHandler));
+// modalOrderOverlay.addEventListener('click', closeModalOrderHandler);
+// modalOrderCloseBtn.addEventListener('click', closeModalOrderHandler);
+// modalOrder.addEventListener('click', stopPropagation);
 
-function createIframe(id) {
-  let iframe = document.createElement('iframe');
+// //! Video script
+// function findmovies() {
+//   let movies = document.querySelectorAll('.movie-item');
 
-  iframe.setAttribute('allowfullscreen', '');
-  iframe.setAttribute('src', generateURL(id));
-  iframe.setAttribute('allow', 'autoplay; encrypted-media');
-  iframe.classList.add('movie-item--img');
+//   for (let i = 0; i < movies.length; i++) {
+//     setupVideo(movies[i]);
+//   }
+// }
 
-  return iframe;
-}
+// function setupVideo(movie) {
+//   let link = movie.querySelector('.movie-item--link');
+//   let media = movie.querySelector('.movie-item--img');
+//   let button = movie.querySelector('.movie-item--btn');
+//   let id = parseMediaURL(media);
 
-function generateURL(id) {
-  let query = '?rel=0&showinfo=0&autoplay=1';
+//   movie.addEventListener('click', () => {
+//     let iframe = createIframe(id);
 
-  return `https://www.youtube.com/embed/${id}${query}`;
-}
+//     link.remove();
+//     button.remove();
+//     movie.appendChild(iframe);
+//   });
 
-findmovies();
+//   link.removeAttribute('href');
+//   movie.classList.add('movie-item--enable');
+// }
+
+// function parseMediaURL(media) {
+//   let regexp = /https:\/\/i.ytimg.com\/vi\/([a-zA-Z0-9_-]+)\/sddefault.jpg/;
+//   let url = media.src;
+//   let match = url.match(regexp);
+
+//   return match[1];
+// }
+
+// function createIframe(id) {
+//   let iframe = document.createElement('iframe');
+
+//   iframe.setAttribute('allowfullscreen', '');
+//   iframe.setAttribute('src', generateURL(id));
+//   iframe.setAttribute('allow', 'autoplay; encrypted-media');
+//   iframe.classList.add('movie-item--img');
+
+//   return iframe;
+// }
+
+// function generateURL(id) {
+//   let query = '?rel=0&showinfo=0&autoplay=1';
+
+//   return `https://www.youtube.com/embed/${id}${query}`;
+// }
+
+// findmovies();

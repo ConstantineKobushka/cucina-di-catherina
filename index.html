@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -69,7 +70,7 @@
     </header>
 
     <main class="main">
-      <section class="hero-desctop">
+      <section class="hero">
         <div class="container">
           <div class="hero-inner">
             <div class="hero-content">
@@ -98,8 +99,8 @@
               <span class="hero-box--img-text-4">FRESH BASIL</span>
               <img
                 class="hero-img"
-                src="./images/hero/ketchup.png"
-                srcset="./images/hero/ketchup.png 1x, ./images/hero/ketchup@2x.png 2x"
+                src="./images/hero/desktop-ketchup.png"
+                srcset="./images/hero/desktop-ketchup.png 1x, ./images/hero/desktop-ketchup@2x.png 2x"
                 alt="Ketchup"
                 width="305"
                 height="535"
@@ -128,8 +129,8 @@
             <div class="hero-mobile--box-img">
               <img
                 class="hero-img"
-                src="./images/hero/ketchup.png"
-                srcset="./images/hero/ketchup.png 1x, ./images/hero/ketchup@2x.png 2x"
+                src="./images/hero-mobile/ketchup.png"
+                srcset="./images/hero-mobile/mobile-ketchup.png 1x, ./images/hero-mobile/mobile-ketchup@2x.png 2x"
                 alt="Ketchup"
                 width="171"
                 height="335"
@@ -162,16 +163,11 @@
           <div class="swiper store-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
+                <!-- <div class="store-wrapper"> -->
                 <div class="store-inner store-inner--first">
                   <div class="stor-box--img">
-                    <picture>
-                      <sourse
-                        srcset="./images/store/store-img-desctop-1.png 1x, ./images/store/store-img-desctop-1@2x.png 2x"
-                        type="image/png"
-                        media="(min-width: 415px)"
-                      >
-                      </sourse>
-                      <sourse
+                    <picture
+                      ><sourse
                         srcset="./images/store/store-img-mobile-1.png 1x, ./images/store/store-img-mobile-1@2x.png 2x"
                         type="image/png"
                         media="(min-width: 320px)"
@@ -179,11 +175,21 @@
                         height="156"
                       >
                       </sourse>
+                      <sourse
+                        srcset="./images/store/store-img-desctop-1.png 1x, ./images/store/store-img-desctop-1@2x.png 2x"
+                        type="image/png"
+                        media="(min-width: 415px)"
+                        width="349"
+                        height="349"
+                      >
+                      </sourse>
                       <img
                         class="store-img"
                         srcset="./images/store/store-img-desctop-1.png 1x, ./images/store/store-img-desctop-1@2x.png 2x"
                         src="./images/store/store-img-1.png"
                         alt="Tomatoes"
+                        width="349"
+                        height="349"
                       />
                     </picture>
                   </div>
@@ -207,12 +213,6 @@
                   </div>
                   <div class="stor-box--img">
                     <picture>
-                      <sourse
-                        srcset="./images/store/store-img-desctop-2.png 1x, ./images/store/store-img-desctop-2@2x.png 2x"
-                        type="image/png"
-                        media="(min-width: 415px)"
-                      >
-                      </sourse>
                       <sourse
                         srcset="./images/store/store-img-mobile-2.png 1x, ./images/store/store-img-mobile-2@2x.png 2x"
                         type="image/png"
@@ -221,26 +221,32 @@
                         height="156"
                       >
                       </sourse>
+                      <sourse
+                        srcset="./images/store/store-img-desctop-2.png 1x, ./images/store/store-img-desctop-2@2x.png 2x"
+                        type="image/png"
+                        media="(min-width: 415px)"
+                        width="349"
+                        height="349"
+                      >
+                      </sourse>
                       <img
                         class="store-img"
                         srcset="./images/store/store-img-desctop-2.png 1x, ./images/store/store-img-desctop-2@2x.png 2x"
                         src="./images/store/store-img-2.png"
                         alt="Tomatoes"
+                        width="349"
+                        height="349"
                       />
                     </picture>
                   </div>
                 </div>
+                <!-- </div> -->
               </div>
               <div class="swiper-slide">
+                <!-- <div class="store-wrapper"> -->
                 <div class="store-inner store-inner--first">
                   <div class="stor-box--img">
                     <picture>
-                      <sourse
-                        srcset="./images/store/store-img-desctop-3.png 1x, ./images/store/store-img-desctop-3@2x.png 2x"
-                        type="image/png"
-                        media="(min-width: 415px)"
-                      >
-                      </sourse>
                       <sourse
                         srcset="./images/store/store-img-mobile-3.png 1x, ./images/store/store-img-mobile-3@2x.png 2x"
                         type="image/png"
@@ -249,11 +255,21 @@
                         height="156"
                       >
                       </sourse>
+                      <sourse
+                        srcset="./images/store/store-img-desctop-3.png 1x, ./images/store/store-img-desctop-3@2x.png 2x"
+                        type="image/png"
+                        media="(min-width: 415px)"
+                        width="349"
+                        height="349"
+                      >
+                      </sourse>
                       <img
                         class="store-img"
                         srcset="./images/store/store-img-desctop-3.png 1x, ./images/store/store-img-desctop-3@2x.png 2x"
                         src="./images/store/store-img-3.png"
                         alt="Tomatoes"
+                        width="349"
+                        height="349"
                       />
                     </picture>
                   </div>
@@ -277,12 +293,6 @@
                   </div>
                   <div class="stor-box--img">
                     <picture>
-                      <sourse
-                        srcset="./images/store/store-img-desctop-4.png 1x, ./images/store/store-img-desctop-4@2x.png 2x"
-                        type="image/png"
-                        media="(min-width: 415px)"
-                      >
-                      </sourse>
                       <sourse
                         srcset="./images/store/store-img-mobile-4.png 1x, ./images/store/store-img-mobile-4@2x.png 2x"
                         type="image/png"
@@ -291,26 +301,32 @@
                         height="156"
                       >
                       </sourse>
+                      <sourse
+                        srcset="./images/store/store-img-desctop-4.png 1x, ./images/store/store-img-desctop-4@2x.png 2x"
+                        type="image/png"
+                        media="(min-width: 415px)"
+                        width="349"
+                        height="349"
+                      >
+                      </sourse>
                       <img
                         class="store-img"
                         srcset="./images/store/store-img-desctop-4.png 1x, ./images/store/store-img-desctop-4@2x.png 2x"
                         src="./images/store/store-img-4.png"
                         alt="Tomatoes"
+                        width="349"
+                        height="349"
                       />
                     </picture>
                   </div>
                 </div>
+                <!-- </div> -->
               </div>
               <div class="swiper-slide">
+                <!-- <div class="store-wrapper"> -->
                 <div class="store-inner store-inner--first">
                   <div class="stor-box--img">
                     <picture>
-                      <sourse
-                        srcset="./images/store/store-img-desctop-5.png 1x, ./images/store/store-img-desctop-5@2x.png 2x"
-                        type="image/png"
-                        media="(min-width: 415px)"
-                      >
-                      </sourse>
                       <sourse
                         srcset="./images/store/store-img-mobile-5.png 1x, ./images/store/store-img-mobile-5@2x.png 2x"
                         type="image/png"
@@ -319,11 +335,21 @@
                         height="156"
                       >
                       </sourse>
+                      <sourse
+                        srcset="./images/store/store-img-desctop-5.png 1x, ./images/store/store-img-desctop-5@2x.png 2x"
+                        type="image/png"
+                        media="(min-width: 415px)"
+                        width="349"
+                        height="349"
+                      >
+                      </sourse>
                       <img
                         class="store-img"
                         srcset="./images/store/store-img-desctop-5.png 1x, ./images/store/store-img-desctop-5@2x.png 2x"
                         src="./images/store/store-img-5.png"
                         alt="Tomatoes"
+                        width="349"
+                        height="349"
                       />
                     </picture>
                   </div>
@@ -348,12 +374,6 @@
                   <div class="stor-box--img">
                     <picture>
                       <sourse
-                        srcset="./images/store/store-img-desctop-6.png 1x, ./images/store/store-img-desctop-6@2x.png 2x"
-                        type="image/png"
-                        media="(min-width: 415px)"
-                      >
-                      </sourse>
-                      <sourse
                         srcset="./images/store/store-img-mobile-6.png 1x, ./images/store/store-img-mobile-6@2x.png 2x"
                         type="image/png"
                         media="(min-width: 320px)"
@@ -361,15 +381,26 @@
                         height="156"
                       >
                       </sourse>
+                      <sourse
+                        srcset="./images/store/store-img-desctop-6.png 1x, ./images/store/store-img-desctop-6@2x.png 2x"
+                        type="image/png"
+                        media="(min-width: 415px)"
+                        width="349"
+                        height="349"
+                      >
+                      </sourse>
                       <img
                         class="store-img"
                         srcset="./images/store/store-img-desctop-6.png 1x, ./images/store/store-img-desctop-6@2x.png 2x"
                         src="./images/store/store-img-6.png"
                         alt="Tomatoes"
+                        width="349"
+                        height="349"
                       />
                     </picture>
                   </div>
                 </div>
+                <!-- </div> -->
               </div>
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
@@ -753,6 +784,7 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
