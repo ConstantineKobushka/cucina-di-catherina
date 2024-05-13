@@ -1,5 +1,5 @@
 const storeSwiper = new Swiper('.store-swiper', {
-  // direction: 'vertical',
+  direction: 'vertical',
   loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
