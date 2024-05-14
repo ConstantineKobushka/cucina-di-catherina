@@ -19,7 +19,7 @@
       <div class="container">
         <nav class="header-nav">
           <a class="header-logo" href="./index.html">
-            <img src="./images/header/logo.svg" alt="Logo" />
+            <img src="./images/icons/logo.svg" alt="Logo" />
           </a>
           <ul class="heder-menu--list">
             <li class="header-menu--item">
@@ -37,7 +37,7 @@
           </ul>
           <button class="header-contacts--btn contacts-btn" type="button">Contact us</button>
           <button class="header-burger--btn" type="button">
-            <img src="./images/header/mobile-btn.svg" alt="Burger-menu" />
+            <img src="./images/icons/btn-open-menu.svg" alt="Burger-menu" />
           </button>
         </nav>
 
@@ -47,7 +47,9 @@
               <img src="./images/header/logo.svg" alt="Logo" />
             </a>
             <button class="mobile-close--btn" type="button">
-              <img src="./images/close-btn.svg" alt="Close button" width="32" height="32" />
+              <svg class="close-btn-svg" width="17" height="17">
+                <use href="./images/icons/icons-sprite.svg#btn-close-menu"></use>
+              </svg>
             </button>
           </div>
           <ul class="mobile-menu--list">
@@ -106,12 +108,36 @@
                 height="535"
               />
             </div>
-            <div class="hero-social">
-              <img src="./images/hero/telegram.svg" alt="Telegram" width="24" height="24" />
-              <img src="./images/hero/instagram.svg" alt="Instagram" width="24" height="24" />
-              <img src="./images/hero/youtube.svg" alt="Youtube" width="24" height="24" />
-              <img src="./images/hero/twitter.svg" alt="Twitter" width="24" height="24" />
-            </div>
+            <ul class="hero-social">
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -149,12 +175,36 @@
               <p class="hero-mobile--text">factories around the world</p>
             </div>
           </div>
-          <div class="hero-mobile--social">
-            <img src="./images/hero/telegram.svg" alt="Telegram" />
-            <img src="./images/hero/instagram.svg" alt="Instagram" />
-            <img src="./images/hero/youtube.svg" alt="Youtube" />
-            <img src="./images/hero/twitter.svg" alt="Twitter" />
-          </div>
+          <ul class="hero-mobile--social">
+            <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+          </ul>
         </div>
       </section>
 
@@ -301,7 +351,9 @@
                   </picture>
                 </a>
                 <button class="movie-item--btn" type="button" aria-label="Play video">
-                  <img src="./images/video/arrow-play.svg" alt="Arrow Play" />
+                  <svg class="movie-item-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#btn-play-video"></use>
+                  </svg>
                 </button>
               </div>
               <h3 class="movie-item--title">Pepper Pasta</h3>
@@ -325,7 +377,9 @@
                   </picture>
                 </a>
                 <button class="movie-item--btn" type="button" aria-label="Play video">
-                  <img src="./images/video/arrow-play.svg" alt="Arrow Play" />
+                  <svg class="movie-item-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#btn-play-video"></use>
+                  </svg>
                 </button>
               </div>
               <h3 class="movie-item--title">Greek Fish</h3>
@@ -339,31 +393,25 @@
           <div class="swiper gallery-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide gallery-slide">
-                <div class="gallery-slide--inner">
                   <picture>
                     <source srcset="./images/foto/foto-desctop-1.jpg 1x, ./images/foto/foto-desctop-1@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)" width="1038"></source>
                     <source srcset="./images/foto/foto-tablet-1.jpg 1x, ./images/foto/foto-tablet-1@2x.jpg 2x" type="image/jpg" media="(min-width: 320px)" width="770"></source>
                     <img class="gallery-slide--img" src="./images/foto/foto-desctop-1.jpg" srcset="./images/foto/foto-desctop-1.jpg 1x, ./images/foto/foto-desctop-1@2x.jpg 2x" alt="Foto number one" width="1038" />
                   </picture>
-                </div>
               </div>
               <div class="swiper-slide gallery-slide">
-                <div class="gallery-slide--inner">
                   <picture>
                     <source srcset="./images/foto/foto-desctop-2.jpg 1x, ./images/foto/foto-desctop-2@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)" width="1038"></source>
                     <source srcset="./images/foto/foto-tablet-2.jpg 1x, ./images/foto/foto-tablet-2@2x.jpg 2x" type="image/jpg" media="(min-width: 320px)" width="770"></source>
                     <img class="gallery-slide--img" src="./images/foto/foto-desctop-2.jpg" srcset="./images/foto/foto-desctop-2.jpg 1x, ./images/foto/foto-desctop-2@2x.jpg 2x" alt="Foto number two" width="1038" />
                   </picture>
-                </div>
               </div>
               <div class="swiper-slide gallery-slide">
-                <div class="gallery-slide--inner">
                   <picture>
                     <source srcset="./images/foto/foto-desctop-3.jpg 1x, ./images/foto/foto-desctop-3@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)" width="1038"></source>
                     <source srcset="./images/foto/foto-tablet-3.jpg 1x, ./images/foto/foto-tablet-3@2x.jpg 2x" type="image/jpg" media="(min-width: 320px)" width="770"></source>
                     <img class="gallery-slide--img" src="./images/foto/foto-desctop-3.jpg" srcset="./images/foto/foto-desctop-3.jpg 1x, ./images/foto/foto-desctop-3@2x.jpg 2x" alt="Foto number two" width="1038" />
                   </picture>
-                </div>
               </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -379,7 +427,7 @@
         <div class="footer-main">
           <nav class="footer-nav">
             <a class="footer-logo" href="./index.html">
-              <img src="./images/header/logo.svg" alt="Logo" />
+              <img src="./images/icons/logo.svg" alt="Logo" />
             </a>
             <ul class="footer-menu--list">
               <li class="footer-menu--item">
@@ -400,30 +448,58 @@
             <address class="footer-address">
               <ul class="footer-address--list">
                 <li class="footer-address-item">
-                  <img src="./images/location.svg" alt="" />
-                  <span class="footer-address--span">Elvia Elviaveien 1, 1234 Oslo</span>
+                  <svg class="footer-address-item-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#footer-location"></use>
+                  </svg>
+                  <a class="footer-address-link" href="">Elvia Elviaveien 1, 1234 Oslo</a>
                 </li>
                 <li class="footer-address-item">
-                  <img src="./images/email.svg" alt="" />
+                  <svg class="footer-address-item-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#footer-email"></use>
+                  </svg>
                   <a class="footer-address-link" href="mailto:willie.jennings@example.com"
                     >willie.jennings@example.com</a
                   >
                 </li>
               </ul>
             </address>
-            <div class="footer-social">
-              <img src="./images/hero/telegram.svg" alt="Telegram" width="16" height="16" />
-              <img src="./images/hero/instagram.svg" alt="Instagram" width="16" height="16" />
-              <img src="./images/hero/youtube.svg" alt="Youtube" width="16" height="16" />
-              <img src="./images/hero/twitter.svg" alt="Twitter" width="16" height="16" />
-            </div>
+            <ul class="footer-social">
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero-social-item">
+                <a class="hero-social-link" href="">
+                  <svg class="hero-social-svg" width="24" height="24">
+                    <use href="./images/icons/icons-sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <p class="footer-copyright">
           By using this website, you agree to the
-          <span><a class="footer-copyright--link" href="#!">Terms of Service</a></span>
+          <span><a class="footer-copyright--link" href="">Terms of Service</a></span>
           and
-          <span><a class="footer-copyright--link" href="#!">Privacy Policy</a></span>
+          <span><a class="footer-copyright--link" href="">Privacy Policy</a></span>
         </p>
       </div>
     </footer>
@@ -431,7 +507,9 @@
     <div class="modal-contacts--overlay">
       <div class="modal-contacts">
         <button class="modal-contacts--close-btn">
-          <img class="close-btn" src="./images/close-btn.svg" alt="Close button" width="32" height="32" />
+          <svg class="modal-contacts--close-btn--svg" width="24" height="24">
+            <use href="./images/icons/icons-sprite.svg#btn-close-menu"></use>
+          </svg>
         </button>
         <p class="modal-contacts--title">Leave your contacts and we will contact you</p>
         <form class="modal-contacts--form">
@@ -477,7 +555,9 @@
     <div class="modal-order--overlay">
       <div class="modal-order">
         <button class="modal-order--close-btn">
-          <img class="close-btn" src="./images/close-btn.svg" alt="Close button" width="32" height="32" />
+          <svg class="modal-order--close-btn--svg" width="24" height="24">
+            <use href="./images/icons/icons-sprite.svg#btn-close-menu"></use>
+          </svg>
         </button>
         <p class="modal-order--title">Your ordering</p>
         <form class="modal-order--form">
