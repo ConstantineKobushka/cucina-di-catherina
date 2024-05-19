@@ -24,6 +24,12 @@ button {
   display: block;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -332,8 +338,6 @@ body {
   justify-content: flex-end;
 }
 .store-box--img {
-  width: 156px;
-  height: 156px;
   border-radius: 50%;
   box-shadow: 0 0 50px 0 #7c7070;
   display: flex;
@@ -388,7 +392,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  top: var(--swiper-navigation-top-offset, 5%);
+  top: var(--swiper-navigation-top-offset, 9%);
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -1066,6 +1070,9 @@ body {
   .store-swiper-button {
     width: 32px;
     height: 32px;
+  }
+  .store-swiper-button-next {
+    top: var(--swiper-navigation-top-offset, 5%);
   }
   .movie-list--item {
     width: 450px;
