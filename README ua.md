@@ -1,6 +1,6 @@
 # Cucina Di Catherina – Найкращі соуси до пасти. Доставка зі смаком 🍝
 
-🔗 **Демо:** [https://constantinekobushka.github.io/cucina-di-catherina/](https://constantinekobushka.github.io/cucina-di-catherina/)
+🔗 **Демо:** [https://constantinekobushka.github.io/cucina-di-catherina](https://constantinekobushka.github.io/cucina-di-catherina)
 
 ## 🔎 Опис проєкту
 
@@ -39,4 +39,7 @@
 
 ```bash
 git clone https://github.com/ConstantineKobushka/cucina-di-catherina
+
+Відкрийте папку проєкту у вашому редакторі коду (наприклад, VS Code)
+та відкрийте файл index.html у браузері — і сайт готовий до перегляду.
 ```
