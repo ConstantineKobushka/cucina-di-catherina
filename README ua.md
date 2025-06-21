@@ -1,6 +1,6 @@
 # Cucina Di Catherina – Найкращі соуси до пасти. Доставка зі смаком 🍝
 
-🔗 **Демо:** [https://constantinekobushka.github.io/cucina-di-catherina](https://constantinekobushka.github.io/cucina-di-catherina)
+🔗 **Демо:** [https://constantinekobushka.github.io/cucina-di-catherina/](https://constantinekobushka.github.io/cucina-di-catherina/)
 
 ## 🔎 Опис проєкту
 
