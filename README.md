@@ -2,6 +2,8 @@
 
 🔗 **Live Demo:** [https://constantinekobushka.github.io/cucina-di-catherina/](https://constantinekobushka.github.io/cucina-di-catherina/)
 
+![Cucina Di Catherina Preview](preview.png)
+
 ## 🔎 Project Description
 
 **Cucina Di Catherina** is a modern one-page website (landing page), built using a _mobile-first_ approach with a fully responsive (fluid) layout that adapts to any screen size. It features a convenient mobile menu, interactive slider, and a product order form via the **“Buy Now”** button.
@@ -40,6 +42,6 @@ Made for those who appreciate **quality**, **speed**, and **accessibility**.
 ```bash
 git clone https://github.com/ConstantineKobushka/cucina-di-catherina
 
-Open the project folder in your code editor (e.g., VS Code)
+Open the project folder in your code editor (for example VS Code)
 and open the index.html file in your browser — and the site is ready to view.
 ```
